@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+
+  <!-- Link to the default light theme -->
+  <link rel="stylesheet" href="light-theme.css" id="theme">
+  <!-- Link to the dark theme -->
+  <link rel="stylesheet" href="dark-theme.css" id="darkTheme">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="display" disabled>
+    <div class="keys">
+      <button class="clears" onclick="clearDisplay()">AC</button>
+      <button class="clears" onclick="deletecharacter()">C</button>
+      <button class="operator" onclick="addToDisplay('/')">/</button>
+      <button class="operator" onclick="calculatePercentage()">%</button>
+      <button onclick="appendToDisplay('7')">7</button>
+      <button onclick="appendToDisplay('8')">8</button>
+      <button onclick="appendToDisplay('9')">9</button>
+      <button class="operator" onclick="addToDisplay('x')">x</button>
+      <button onclick="appendToDisplay('4')">4</button>
+      <button onclick="appendToDisplay('5')">5</button>
+      <button onclick="appendToDisplay('6')">6</button>
+      <button class="operator" onclick="addToDisplay('-')">-</button>
+      <button onclick="appendToDisplay('1')">1</button>
+      <button onclick="appendToDisplay('2')">2</button>
+      <button onclick="appendToDisplay('3')">3</button>
+      <button class="operator" onclick="addToDisplay('+')">+</button>
+      <button onclick="appendToDisplay('0')">0</button>
+      <button onclick="appendToDisplay('.')">.</button>
+      <button class="bracket" onclick="toggleBracket()">()</button>
+      <button class="equal" onclick="calculate()">=</button>
+    </div>
+</div>   
+    <label class="switch">
+      <input type="checkbox" id="themeToggle" onclick="toggleTheme()">
+      <span class="slider round"></span>
+    </label>
+  <script src="scripts.js"></script>
+</body>
+</html>
